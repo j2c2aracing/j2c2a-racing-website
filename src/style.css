@@ -1,0 +1,386 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  background: #0b0b0b;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background: #0b0b0b;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  height: 82px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #090909;
+  border-bottom: 1px solid #252525;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #e10600;
+  margin-left: 5px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 38px;
+}
+
+.navbar nav a {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transition: color 0.2s;
+}
+
+.navbar nav a:hover {
+  color: #e10600;
+}
+
+.header-button,
+.button-primary {
+  background: #e10600;
+  padding: 15px 23px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.header-button:hover,
+.button-primary:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.hero {
+  min-height: 660px;
+  height: calc(90vh - 82px);
+  max-height: 850px;
+  padding: 100px 9% 70px;
+  background:
+    linear-gradient(90deg, #090909 0%, rgba(9,9,9,.95) 40%, rgba(9,9,9,.2) 100%),
+    linear-gradient(0deg, #090909 0%, transparent 35%),
+    url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?w=2000&q=85') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 12%;
+  height: 100%;
+  width: 5px;
+  background: #e10600;
+  transform: skew(-15deg);
+  opacity: .8;
+}
+
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow,
+.section-heading span,
+.manifesto > span {
+  color: #e10600;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(85px, 12vw, 155px);
+  font-weight: 900;
+  line-height: .78;
+  letter-spacing: -5px;
+  margin: 32px 0;
+}
+
+.hero h1 span {
+  color: #e10600;
+}
+
+.hero-content p {
+  color: #b9b9b9;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 420px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.button-secondary {
+  padding: 15px 23px;
+  border: 1px solid #777;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.button-secondary:hover {
+  border-color: #e10600;
+  color: #e10600;
+}
+
+.hero-number {
+  position: absolute;
+  right: 12%;
+  bottom: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  opacity: .8;
+}
+
+.hero-number span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: .8;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.hero-number strong {
+  color: #e10600;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 9%;
+  right: 9%;
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.universes {
+  padding: 110px 9%;
+  background: #f2f2f2;
+  color: #111;
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
+
+.section-heading span {
+  color: #e10600;
+}
+
+.section-heading h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(50px, 7vw, 85px);
+  line-height: .9;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.universe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.universe-card {
+  min-height: 420px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.universe-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.95), rgba(0,0,0,.12));
+}
+
+.league {
+  background-image: url('https://images.unsplash.com/photo-1532906619279-a4b7267faa66?w=1000&q=85');
+}
+
+.esports {
+  background-image: url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1000&q=85');
+}
+
+.card-index,
+.universe-card > div {
+  position: relative;
+  z-index: 1;
+}
+
+.card-index {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.universe-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 65px;
+  font-weight: 900;
+  line-height: .85;
+  margin-bottom: 18px;
+}
+
+.universe-card p {
+  font-size: 12px;
+  color: #ccc;
+  line-height: 1.8;
+  max-width: 300px;
+  margin-bottom: 24px;
+}
+
+.universe-card a {
+  color: #ff3630;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.manifesto {
+  padding: 115px 9%;
+  background: #111;
+  text-align: center;
+}
+
+.manifesto h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(45px, 8vw, 95px);
+  font-weight: 900;
+  line-height: .95;
+  margin-top: 25px;
+}
+
+.manifesto em {
+  color: #e10600;
+  font-style: normal;
+}
+
+.footer {
+  padding: 35px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #080808;
+  border-top: 1px solid #252525;
+}
+
+.footer p,
+.footer > span {
+  font-size: 10px;
+  color: #777;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    padding: 0 5%;
+    height: 70px;
+  }
+
+  .navbar nav {
+    gap: 13px;
+  }
+
+  .navbar nav a {
+    font-size: 9px;
+  }
+
+  .header-button {
+    display: none;
+  }
+
+  .hero {
+    min-height: 650px;
+    padding: 80px 7%;
+  }
+
+  .hero-number {
+    right: 7%;
+    bottom: 15%;
+  }
+
+  .hero-number span {
+    font-size: 90px;
+  }
+
+  .hero-bottom {
+    left: 7%;
+    right: 7%;
+    font-size: 7px;
+  }
+
+  .universes {
+    padding: 75px 6%;
+  }
+
+  .universe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .universe-card {
+    min-height: 350px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+}
